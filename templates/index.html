@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Transcript Summarizer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white shadow-lg rounded-lg p-8 w-full max-w-lg">
+        <h1 class="text-2xl font-bold text-center text-gray-800 mb-6">YouTube Transcript Summarizer</h1>
+        <form id="summarize-form" method="POST" action="/summarize" class="space-y-4">
+            <div>
+                <label for="url" class="block text-gray-700 font-medium">YouTube Video URL:</label>
+                <input type="text" id="url" name="url" required class="w-full p-2 border border-gray-300 rounded-md focus:ring-2">
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <button type="submit" name="action" value="bullet_points" 
+                        class="bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600">Bullet Points</button>
+                <button type="submit" name="action" value="summary" 
+                        class="bg-green-500 text-white py-2 rounded-md hover:bg-green-600">Paragraph</button>
+                <button type="submit" name="action" value="key_words" 
+                        class="bg-purple-500 text-white py-2 rounded-md hover:bg-purple-600">Keywords</button>
+                <button type="submit" name="action" value="questions" 
+                        class="bg-yellow-500 text-white py-2 rounded-md hover:bg-yellow-600">Questions</button>
+                <button type="submit" name="action" value="learnings" 
+                        class="col-span-2 bg-red-500 text-white py-2 rounded-md hover:bg-red-600">Learnings</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
