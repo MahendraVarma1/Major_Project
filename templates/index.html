@@ -9,6 +9,7 @@
 <body class="bg-gray-100 flex items-center justify-center min-h-screen">
     <div class="bg-white shadow-lg rounded-lg p-8 w-full max-w-lg">
         <h1 class="text-2xl font-bold text-center text-gray-800 mb-6">YouTube Transcript Summarizer</h1>
+        
         <form id="summarize-form" method="POST" action="/summarize" class="space-y-4">
             <div>
                 <label for="url" class="block text-gray-700 font-medium">YouTube Video URL:</label>
@@ -27,6 +28,11 @@
                         class="col-span-2 bg-red-500 text-white py-2 rounded-md hover:bg-red-600">Learnings</button>
             </div>
         </form>
+
+        <!-- Link to Result Page -->
+        <div class="mt-6 text-center">
+            <a href="/result" class="text-blue-500 hover:underline">View Latest Summary</a>
+        </div>
     </div>
 </body>
 </html>

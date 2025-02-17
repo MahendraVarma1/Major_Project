@@ -12,11 +12,12 @@ if not os.path.exists(PDF_DIR):
 
 # DeepSeek API configuration
 DEEPSEEK_API_KEY = "sk-0356ccfc16224023b3817f1e9b461f75"
-DEEPSEEK_API_URL = "https://api.deepseek.com"  
+DEEPSEEK_API_URL = "https://api.deepseek.com/v1/chat/completions"  
 
 # Function to fetch transcript
 def fetch_transcript(video_id):
     try:
+        
         transcript = YouTubeTranscriptApi.get_transcript(video_id)
         text = " ".join([entry['text'] for entry in transcript])
         return text
